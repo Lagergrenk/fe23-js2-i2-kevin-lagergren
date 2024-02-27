@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "description": "Create design mockups",
+      "progress": "In Progress",
+      "category": "UX",
+      "name": "John Doe"
+    },
+    {
+      "id": 2,
+      "description": "Develop database schema",
+      "progress": "To Do",
+      "category": "Backend",
+      "name": null
+    },
+    {
+      "id": 3,
+      "description": "Implement the HTML and CSS",
+      "progress": "Done",
+      "category": "Frontend",
+      "name": "Jane Doe"
+    }
+  ]
+}
