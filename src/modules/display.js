@@ -19,7 +19,7 @@ export function createToDoCard(taskObject) {
 
 export function createInProgressCard(taskObject) {
   const parent = document.querySelector("#in-progress");
-  const card = createCard(taskObject);
+  const card = createCard(taskObject, true);
   const button = createButton("Done >>", "done-btn");
   card.appendChild(button);
   parent.appendChild(card);
@@ -27,14 +27,14 @@ export function createInProgressCard(taskObject) {
 
 export function createDoneCard(taskObject) {
   const parent = document.querySelector("#done");
-  const card = createCard(taskObject);
+  const card = createCard(taskObject, true);
   const button = createButton("Remove X", "remove-btn");
   card.appendChild(button);
   parent.appendChild(card);
 }
 
 // Helper function to create elements for the cards
-function createCard(taskObject) {
+function createCard(taskObject, assigned = false) {
   const card = document.createElement("div");
   card.classList.add("card");
   card.style.backgroundColor = checkCategory(taskObject.category);
@@ -42,7 +42,7 @@ function createCard(taskObject) {
   const description = document.createElement("p");
   description.textContent = taskObject.task;
   card.appendChild(description);
-  if (taskObject.assigned) {
+  if (assigned) {
     const assigned = document.createElement("p");
     assigned.textContent = `- ${taskObject.assigned}`;
     card.appendChild(assigned);
