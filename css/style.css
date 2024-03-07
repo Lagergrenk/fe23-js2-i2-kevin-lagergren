@@ -70,16 +70,17 @@ body {
   flex-direction: column;
   justify-content: center;
   min-width: 315px;
-  width: fit-content;
-  height: 100px;
+  width: 315px;
+  min-height: 110px;
+  height: fit-content;
   padding: 10px;
-  margin: 5px;
+  margin-bottom: 5px;
   border-radius: 10px;
 }
 
-#assign-btn,
-#done-btn,
-#remove-btn {
+.assign-btn,
+.done-btn,
+.remove-btn {
   max-width: 90px;
   margin-top: 10px;
 }

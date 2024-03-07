@@ -13,14 +13,19 @@
     <header class="header">
       <h1>Scrum Board</h1>
 
-      <form>
-        <input type="text" id="task" placeholder="Enter a task" />
+      <form class="task-form">
+        <input
+          type="text"
+          id="task"
+          placeholder="Enter a task"
+          autocomplete="off"
+        />
         <select name="task-category" id="task-category">
           <option value="ux">UX</option>
-          <option value="dev-backend">Dev backend</option>
-          <option value="dev-frontend">Dev frontend</option>
+          <option value="dev backend">Dev backend</option>
+          <option value="dev frontend">Dev frontend</option>
         </select>
-        <input type="submit" value="Add" id="add-task" />
+        <input type="submit" value="Add" class="add-task" />
       </form>
 
       <section class="board">
