@@ -17,7 +17,7 @@ import {
 export function refreshTasks() {
   fetchTasks().then((data) => {
     clearTaskUI();
-    console.log(data);
+
     for (const key in data) {
       const task = data[key];
       task.id = key;

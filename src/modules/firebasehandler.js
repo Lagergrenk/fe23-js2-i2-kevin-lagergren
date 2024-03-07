@@ -30,7 +30,6 @@ export async function postTask(task) {
   try {
     const res = await fetch(url, options);
     const info = await res.json();
-    console.log(info);
   } catch (error) {
     console.log(error);
   }
@@ -48,7 +47,7 @@ export async function patchTask(taskId, updates) {
   try {
     const response = await fetch(url, options);
     const data = await response.json();
-    console.log(data);
+
     return data;
   } catch (error) {
     console.log(error);
@@ -65,20 +64,6 @@ export async function deleteTask(id) {
 
     const res = await fetch(url, options);
     const info = await res.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-export async function getTaskId(task) {
-  try {
-    const tasks = await fetchTasks();
-    for (const key in tasks) {
-      if (tasks[key].task === task) {
-        console.log("getTaskID" + key);
-        return key;
-      }
-    }
   } catch (error) {
     console.log(error);
   }
